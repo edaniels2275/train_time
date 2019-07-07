@@ -1,13 +1,3 @@
- // Steps to complete:
-
-// 1. Initialize Firebase
-// 2. Create button for adding new trains - then update the html + update the database
-// 3. Create a way to retrieve trains from the train database.
-// 4. Calculate the train next arrival. 
-// Add frequency to first train time to get next arrival using moment.js
-// 5. Calculate minutes away.
-// Subtract current time from next arrival to get minutes away.
-
 // 1. Initialize Firebase
 var config = {
     apiKey: "AIzaSyAEl2Gb-Af5Mh8TR2-hF7VdcNJAphXg4tI",
@@ -59,10 +49,7 @@ var config = {
     var trainDestination = childSnapshot.val().destination;
     var firstTrainTime = childSnapshot.val().first_train;
     var trainFrequency = childSnapshot.val().frequency;
-  
-  
-  
-  
+
       var currentTime = moment();
   
       //Subtracts the schedule of the first train time back a year to make sure it's before current time.
